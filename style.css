@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    background: url('./image/background.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+.big-title {
+    font-size: 4em;
+    text-align: center;
+    color: #fff;
+    /* margin-top: 20vh; Adjusts title positioning */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+.mobile_button{
+    display: none;
+}
+.header {
+    width: 100%;
+    background: #444759;
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    top: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 32px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar {
+    display: flex;
+}
+
+.choice {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.choice li {
+    position: relative;
+}
+
+.choice li a {
+    display: block;
+    font-size: 18px;
+    color: #fff;
+    padding: 22px 20px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.choice li a:hover {
+    color: red;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #444759;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.2);
+    min-width: 160px;
+    z-index: 1;
+    transition: all ease 0.5s;
+}
+
+.choice li:hover .dropdown {
+    display: block;
+    opacity: 1;
+}
+
+.dropdown li {
+    width: 100%;
+}
+
+.dropdown li a {
+    padding: 12px 16px;
+    color: #fff;
+    text-align: left;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown li a:hover {
+    background-color: #575757;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+@media (max-width: 600px) {
+    .header{
+        display: none;
+        height: 100vh;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 0;
+        justify-content: flex-start;
+    }
+    .header .logo{
+        height: 30%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        /* cursor: pointer; */
+    }
+    .header .navbar .choice{
+        width: 100%;
+        height: 70%;
+        padding: 0;
+        margin: 0;
+        /* flex-wrap: wrap; */
+        /* display: flex;*/
+        flex-direction: column; 
+        /* align-content: space-between; */
+    }
+    .choice li{
+        width: 100%;
+        /* height: 20%; */
+        height: 10vh;
+        padding: 0;
+        margin: 0;
+        /* display: flex; */
+        /* flex-wrap: nowrap; */
+        position: relative;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: all ease-in-out 100ms;
+    }
+    .choice li a{
+        width: 100%;
+        height: fit-content;
+        padding: 0;
+        margin: 0;
+        
+    }
+    .choice li a:hover{
+        background-color: transparent;
+        color: red;
+    }
+    .dropdown{
+        /* height: 70%; */
+        display: none;
+        flex-wrap: nowrap; 
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        z-index: 2000;
+        left: 0;
+    }
+    .dropdown li {
+        /* height: max-content; */
+        /* display: block; */
+        background-color: #111;
+    }
+    .choice li:hover>ul{
+        display: flex;
+    }
+    .header .navbar{
+        width: 100%;
+        /* height: 70%; */
+        height: 60vh;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: stretch;
+    }
+    .mobile_button{
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 0;
+        right: 0;
+        z-index: 200;
+    }
+    .login-box {
+        width: 90%;
+        left: 5%;
+        transform: none;
+    }
+}
